@@ -1,0 +1,112 @@
+/* Header styles */
+.standard-header {
+  background: linear-gradient(90deg, rgb(68, 165, 207) 0%, rgb(53, 143, 191) 50%, rgb(120, 161, 215) 100%);
+  padding: 15px;
+  background-size: cover;
+  background-position: center;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.header-logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 25%;
+}
+
+.header-text {
+  margin-left: 10px;
+}
+
+.header-text h1 {
+  margin: 0;
+  font-weight: bold;
+}
+
+.header-text h3 {
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Navigation button styles */
+.nav-btn {
+  padding: 25px 55px;
+  cursor: pointer;
+  border-radius: 8px;
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.8);
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  backdrop-filter: brightness(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  transition: all 0.2s ease;
+}
+
+
+
+ /* Contact page */
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 50px 20px;
+  flex-wrap: wrap;
+}
+
+.contact-card {
+  background: white;
+  padding: 40px;
+  width: 320px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contact-card h2 {
+  margin-top: 0;
+}
+
+.contact-btn,
+.discord-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 25px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: 0.2s ease;
+}
+
+.contact-btn {
+  background: rgb(53, 143, 191);
+  color: white;
+}
+
+.contact-btn:hover {
+  background: rgb(40, 120, 170);
+}
+
+.discord-btn {
+  background: #5865F2;
+  color: white;
+}
+
+.discord-btn:hover {
+  background: #4752C4;
+}

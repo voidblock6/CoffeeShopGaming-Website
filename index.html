@@ -5,65 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CoffeeShopGaming</title>       
     <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="styles.css">
 
     <style>
-    body {
+     body {
         margin: 0;
         font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .nav-btn {
-        padding: 25px 55px;
-        cursor: pointer;
-        border-radius: 8px;
-        background: transparent;
-        border: 2px solid rgba(255,255,255,0.8);
-        color: white;
-        font-weight: bold;
-        font-size: 24px; 
-        backdrop-filter: brightness(1.05);
-        box-shadow: 0 4px 10px rgba(0,0,0,0.35);
-        transition: all 0.2s ease;
     }
 
     .nav-btn:hover {
         background: rgba(255,255,255,0.15);
         transform: translateY(-2px);
     }
-
-
-        .container {
-    display: flex;
-    justify-content: center; 
-}
+    
     </style>
 </head>
 
 <body>
 
-
-<header style="
-  background: linear-gradient(90deg, rgb(68, 165, 207) 0%, rgb(53, 143, 191) 50%, rgb(120, 161, 215) 100%);
-  padding: 15px;
-   margin: 0;
-
-  background-size: cover;
-  background-position: center;
-  min-height: 100px;
-  display: flex; 
-  align-items: center; 
-  justify-content: space-between;
-">
-
-    <div style="display: flex; align-items: center; color: white; text-shadow: 2px 2px 4px #000;">
-        <img src="images/logo.png" width="100" height="100" alt="Logo" style="border-radius: 25%;">
-        <div style="margin-left: 10px;">
-            <h1 style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-weight: bold;">
-                CoffeeShopGaming
-            </h1>
-            <h3 style="margin: 0; font-family: Arial, Helvetica, sans-serif; font-weight: bold;">
-                Fueled by coffee, Powered by gamers
-            </h3>
+<header class="standard-header">
+    <div class="header-content">
+        <img src="images/logo.png" class="header-logo" alt="Logo">
+        <div class="header-text">
+            <h1>CoffeeShopGaming</h1>
+            <h3>Fueled by coffee, Powered by gamers</h3>
         </div>
     </div>
 
@@ -72,9 +37,7 @@
         <button class="nav-btn" onclick="window.location.href='picture_libary.html'">Library</button>
         <button class="nav-btn" onclick="window.location.href='contact_us.html'">Contact Us</button>
     </nav>
-
 </header>
-
 <div class="container">
   <span class="center-content"><h1>Welcome to the CoffeeShopGaming website</h1></span> <!-- centers the word -->
 </div>
