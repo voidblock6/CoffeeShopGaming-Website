@@ -151,16 +151,18 @@
   margin-top: 0;
 }
 
-.intro-text {
+.home-text {
   display: flex;
-  flex-direction: column; /* Add this line */
+  flex-direction: column; 
   font-weight: bold;
-  justify-content: left;
-  align-items: left;
+  justify-content: center;
+  align-items: center;
   max-width: 800px; 
   padding: 0 20px; 
   font-size: 18px; 
   line-height: 1.6;
+  align-items: center;
+  margin: 0 auto;
 }
 @media (max-width: 768px) {
   .standard-header {
@@ -180,3 +182,19 @@
     font-size: 16px;
   }
 }
+
+.staff-card {
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, rgb(68, 165, 207) 0%, rgb(53, 143, 191) 50%, rgb(120, 161, 215) 100%);
+  color: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: 320px;  
+  text-align: center;
+  font-size: 18px; 
+  line-height: 1.6;
+  font-weight: bold;
+}
+
+
