@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CoffeeShopGaming</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="images\logo.png">
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo.png" alt="Logo" />
+      <div class="nav-logo-text">
+        CoffeeShopGaming
+        <small>Season 2 · Live</small>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="library.html">Library</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+      <li><button class="theme-toggle" id="themeBtn" title="Toggle theme" aria-label="Toggle theme">☀️</button></li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-glow"></div>
+    <img src="images/logo.png" alt="CoffeeShopGaming Logo" class="hero-logo" />
+    <h1>Coffee<span>Shop</span>Gaming</h1>
+    <p class="hero-sub">Fueled by coffee · Powered by gamers</p>
+    <div class="hero-actions">
+      <a href="#server" class="btn btn-filled">The Server</a>
+      <a href="#team" class="btn btn-outline">Our Team</a>
+    </div>
+    <div class="steam-wrap" aria-hidden="true">
+      <div class="steam-lines">
+        <div class="steam"></div>
+        <div class="steam"></div>
+        <div class="steam"></div>
+      </div>
+      <p class="scroll-hint">scroll ↓</p>
+    </div>
+  </div>
+  </div>
+
+  <!-- WELCOME / ABOUT -->
+  <section class="section" id="about" style="padding-bottom:60px;">
+    <h2 class="section-title reveal">Welcome to the CoffeeShopGaming website</h2>
+    <div class="about-body reveal delay-1" style="max-width:680px;">
+      <p>
+        CoffeeShopGaming was originally founded as a <strong>Minecraft server</strong> for people from an indie-game
+        Discord server. We eventually grew and rebranded into the CoffeeShopGaming you know today, a tiny but vibrant
+        community full of amazing people.
+      </p>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- SERVER -->
+  <section class="section" id="server">
+    <h2 class="section-title reveal">The Server</h2>
+    <div class="about-body reveal delay-1" style="max-width:680px;">
+      <p>
+        Season 2 is currently running! It's a <strong>Forge 1.20.1 modpack</strong> built around
+        Create mod and Origins(++). We have a minigame area featuring spleef, TNT run, and more on the way.
+        We also host bi-weekly events. Our most recent ones were the End Fight
+        and a custom parkour with a prize. Check out the
+        <a href="library.html" style="color:var(--amber);text-decoration:none;font-weight:600;">picture library</a>
+        to see some screenshots from the server.
+      </p>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- TEAM -->
+  <section class="section" id="team">
+    <h2 class="section-title reveal">Our Team</h2>
+
+    <div class="team-grid">
+      <div class="team-card reveal delay-1">
+        <div class="team-card-role-top">Co-Owner</div>
+        <img src="images/voidblockskin.png" alt="Void" />
+        <div class="team-name">Void</div>
+        <p class="team-desc">The founder of the server and now a Co-owner.
+          Void runs events, plans new seasons, and keeps everything moving.
+        </p>
+      </div>
+      <div class="team-card reveal delay-2">
+        <div class="team-card-role-top">Co-Owner</div>
+        <img src="images/squidforgeskin.png" alt="Squidforge" />
+        <div class="team-name">Squidforge</div>
+        <p class="team-desc">Squidforge hosts the server.
+          Without him, none of this exists. He's also an indie game developer.</p>
+      </div>
+      <div class="team-card reveal delay-3">
+        <div class="team-card-role-top">Co-Owner</div>
+        <img src="images/securityguyskin.png" alt="Securityguy" />
+        <div class="team-name">Securityguy</div>
+        <p class="team-desc">Handles everything Discord. Securityguy manages the server bot and the
+          Minecraft-to-Discord chat integration, with more in the works.</p>
+      </div>
+      <div class="team-card reveal delay-4">
+        <div class="team-card-role-top mod">Moderator</div>
+        <img src="images/jeffskin.png" alt="Jeff" />
+        <div class="team-name">Jeff</div>
+        <p class="team-desc">A coder and builder who made his own mod and helped build the event area.
+          Jeff is a key part of what makes the server great.</p>
+      </div>
+      <div class="team-card reveal delay-4">
+        <div class="team-card-role-top" style="color:var(--pixel);">Web Manager</div>
+        <img src="images/catskin.png" alt="Cat" />
+        <div class="team-name">Cat</div>
+        <p class="team-desc">Designed and built this website.
+          Cat handles the design, upkeep, and any updates to keep things looking nice.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-brand">
+      ☕ CoffeeShopGaming
+      <small>Fueled by coffee · Powered by gamers</small>
+    </div>
+    <ul class="footer-links">
+      <li><a href="#server">Server</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="library.html">Library</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <span class="footer-copy">© 2026 CoffeeShopGaming</span>
+  </footer>
+
+  <script src="theme.js"></script>
+  <script src="hamburger.js"></script>
+  <script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 50));
+    document.querySelectorAll('.reveal').forEach(el => {
+      new IntersectionObserver(([e]) => { if (e.isIntersecting) el.classList.add('visible'); }, { threshold: 0.1 }).observe(el);
+    });
+  </script>
+</body>
+
+</html>

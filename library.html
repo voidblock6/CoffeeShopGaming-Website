@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library · CoffeeShopGaming</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="images\logo.png">
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 16px;
+            margin-top: 48px;
+        }
+
+        .gallery-item {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            aspect-ratio: 16/10;
+            position: relative;
+            cursor: pointer;
+            transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+        }
+
+        .gallery-item:hover {
+            border-color: var(--amber);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 28px var(--shadow);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.04);
+        }
+
+        .gallery-item-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px 14px 12px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
+            font-size: 14px;
+            font-weight: 500;
+            color: #fff;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .gallery-item:hover .gallery-item-label {
+            opacity: 1;
+        }
+
+        /* Placeholder tiles for images not yet uploaded */
+        .gallery-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .gallery-placeholder .icon {
+            font-size: 30px;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.88);
+            z-index: 999;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .lightbox.open {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90vw;
+            max-height: 85vh;
+            border-radius: 8px;
+            object-fit: contain;
+        }
+
+        .lightbox-close {
+            position: fixed;
+            top: 20px;
+            right: 24px;
+            font-size: 28px;
+            color: #fff;
+            cursor: pointer;
+            background: none;
+            border: none;
+            line-height: 1;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+
+        .lightbox-close:hover {
+            opacity: 1;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 80px 20px;
+            color: var(--muted);
+        }
+
+        .empty-state .icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .empty-state p {
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav id="nav">
+        <a href="index.html" class="nav-logo">
+            <img src="images/logo.png" alt="Logo" />
+            <div class="nav-logo-text">
+                CoffeeShopGaming
+                <small>Season 2 · Live</small>
+            </div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="library.html" class="active">Library</a></li>
+            <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+            <li><button class="theme-toggle" id="themeBtn" title="Toggle theme" aria-label="Toggle theme">☀️</button>
+            </li>
+        </ul>
+
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <div class="page-hero">
+        <p class="eyebrow">Picture Library</p>
+        <h1>Screenshots &amp; Highlights</h1>
+        <p>A collection of moments from the server - builds, events, and general silliness.</p>
+    </div>
+
+    <!-- GALLERY -->
+    <section class="section" style="padding-top:0;">
+
+        <div class="gallery-grid" id="galleryGrid">
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="images\website_img_1.png" alt="The inside of a small factory made with the Create Mod" />
+                <div class="gallery-item-label">Small factory made with the Create Mod</div>
+            </div>
+
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="images\duckling_base_1.png" alt="Ducklings base" />
+                <div class="gallery-item-label">Ducklings base</div>
+            </div>
+
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="images\website_img_2.png" alt="A train made using Create Mod" />
+                <div class="gallery-item-label">A train made using Create Mod</div>
+            </div>
+
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="images\jukebox_1.png" alt="A small party at a jukebox" />
+                <div class="gallery-item-label">A small party at a jukebox</div>
+            </div>
+
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="images\gear_collection_1.png" alt="A collection of gear" />
+                <div class="gallery-item-label">A collection of gear</div>
+            </div>
+
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="images\voids_base_1.png" alt="The inside of voids base" />
+                <div class="gallery-item-label">The inside of Voids base</div>
+            </div>
+
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="images\cherry_trees_1.png" alt="Cherry tree landscape" />
+                <div class="gallery-item-label">Cherry tree landscape</div>
+            </div>
+
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="images\the_end_1.png" alt="The End" />
+                <div class="gallery-item-label">The End</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+        <img id="lightboxImg" src="" alt="" />
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-brand">
+            ☕ CoffeeShopGaming
+            <small>Fueled by coffee · Powered by gamers</small>
+        </div>
+        <ul class="footer-links">
+            <li><a href="index.html#server">Server</a></li>
+            <li><a href="index.html#team">Team</a></li>
+            <li><a href="library.html">Library</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <span class="footer-copy">© 2026 CoffeeShopGaming</span>
+    </footer>
+
+    <script src="theme.js"></script>
+    <script src="hamburger.js"></script>
+    <script>
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 50));
+
+        function openLightbox(el) {
+            const img = el.querySelector('img');
+            if (!img) return;
+            document.getElementById('lightboxImg').src = img.src;
+            document.getElementById('lightboxImg').alt = img.alt;
+            document.getElementById('lightbox').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('open');
+            document.body.style.overflow = '';
+        }
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+    </script>
+</body>
+
+</html>
