@@ -1,0 +1,146 @@
+.seasons-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 48px;
+}
+
+.season-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.season-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 24px 28px;
+  border-bottom: 1px solid var(--border);
+}
+
+.season-card-header-left h3 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.season-dates {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.season-status {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+.season-status.ended {
+  background: rgba(154, 120, 88, 0.15);
+  color: var(--muted);
+  border: 1px solid rgba(154, 120, 88, 0.3);
+}
+
+.season-status.upcoming {
+  background: rgba(126, 207, 110, 0.1);
+  color: var(--pixel);
+  border: 1px solid rgba(126, 207, 110, 0.25);
+}
+
+.season-card-body {
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.season-card-body p {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.75;
+  max-width: 680px;
+}
+
+.season-card-body p strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.season-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.season-tag {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 12px;
+}
+
+.season-tag.amber {
+  color: var(--amber);
+  border: 1px solid rgba(212, 138, 42, 0.35);
+  background: rgba(212, 138, 42, 0.08);
+}
+
+.season-tag.green {
+  color: var(--pixel);
+  border: 1px solid rgba(126, 207, 110, 0.3);
+  background: rgba(126, 207, 110, 0.08);
+}
+
+.season-tag.blue {
+  color: #80b0f0;
+  border: 1px solid rgba(128, 176, 240, 0.3);
+  background: rgba(128, 176, 240, 0.08);
+}
+
+.season-tag.red {
+  color: #e08060;
+  border: 1px solid rgba(224, 128, 96, 0.3);
+  background: rgba(224, 128, 96, 0.08);
+}
+
+.season-tag.muted {
+  color: var(--muted);
+  border: 1px solid var(--border);
+  background: var(--tag-bg);
+}
+
+.season-card-footer {
+  padding: 16px 28px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.season-upcoming {
+  padding: 40px 28px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.season-upcoming .icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.season-upcoming p {
+  max-width: 400px;
+  margin: 0 auto;
+  line-height: 1.7;
+}

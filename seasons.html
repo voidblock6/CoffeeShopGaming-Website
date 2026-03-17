@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seasons · CoffeeShopGaming</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="seasons.css"/>
+  <link rel="icon" href="images/logo.png">
+</head>
+
+<body>
+
+  <nav id="nav">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo.png" alt="Logo" />
+      <div class="nav-logo-text">
+        CoffeeShopGaming
+        <small>Season 3 · In the Works</small>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="seasons.html" class="active">Seasons</a></li>
+      <li><a href="library.html">Library</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+      <li><button class="theme-toggle" id="themeBtn" title="Toggle theme" aria-label="Toggle theme">☀️</button></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="page-hero">
+    <h1>Seasons</h1>
+    <p>A look back at every season of CoffeeShopGaming, and what's coming next.</p>
+  </div>
+
+  <section class="section" style="padding-top:0;">
+    <div class="seasons-list">
+
+      <!-- SEASON 3 -->
+      <div class="season-card">
+        <div class="season-card-header">
+          <div class="season-card-header-left">
+            <h3>Season 3</h3>
+            <span class="season-dates">Coming soon</span>
+          </div>
+          <span class="season-status upcoming">In the Works</span>
+        </div>
+        <div class="season-upcoming">
+          <div class="icon">☕</div>
+          <p>Season 3 is currently being planned. Stay tuned in the Discord for updates!</p>
+        </div>
+      </div>
+
+      <!-- SEASON 2 -->
+      <div class="season-card">
+        <div class="season-card-header">
+          <div class="season-card-header-left">
+            <h3>Season 2</h3>
+            <span class="season-dates">January 24, 2026 - March 14, 2026</span>
+          </div>
+          <span class="season-status ended">Ended</span>
+        </div>
+        <div class="season-card-body">
+          <p>
+            Season 2 was a <strong>Forge 1.20.1 modpack</strong> built around Create mod and Origins(++).
+            The server had a minigame arena featuring spleef and TNT run, and hosted bi-weekly events throughout the season.
+            Notable events included the End Fight and a custom parkour with a prize.
+            It was a season to remember!
+          </p>
+          <div class="season-tags">
+            <span class="season-tag amber">Create Mod</span>
+            <span class="season-tag green">Origins++</span>
+            <span class="season-tag blue">Forge 1.20.1</span>
+            <span class="season-tag red">Spleef</span>
+            <span class="season-tag red">TNT Run</span>
+            <span class="season-tag muted">End Fight</span>
+            <span class="season-tag muted">Custom Parkour</span>
+          </div>
+        </div>
+        <div class="season-card-footer">
+          <a href="library.html#season-2" class="btn btn-outline" style="padding:8px 18px; font-size:13px;">View Screenshots</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-brand">
+      ☕ CoffeeShopGaming
+      <small>Fueled by coffee · Powered by gamers</small>
+    </div>
+    <ul class="footer-links">
+      <li><a href="index.html#server">Server</a></li>
+      <li><a href="index.html#team">Team</a></li>
+      <li><a href="library.html">Library</a></li>
+      <li><a href="seasons.html">Seasons</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <span class="footer-copy">© 2026 CoffeeShopGaming</span>
+  </footer>
+
+  <script src="theme.js"></script>
+  <script src="hamburger.js"></script>
+  <script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 50));
+  </script>
+</body>
+
+</html>

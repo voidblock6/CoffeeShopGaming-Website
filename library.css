@@ -1,0 +1,199 @@
+.season-block {
+    margin-top: 0;
+}
+
+.season-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 24px;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    transition: border-color 0.3s ease, border-radius 0.3s ease;
+    text-align: left;
+}
+
+.season-toggle:hover {
+    border-color: var(--amber);
+}
+
+.seasons-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.season-toggle.open {
+    border-radius: 12px 12px 0 0;
+    border-color: var(--amber);
+    border-bottom-color: transparent;
+}
+
+.season-toggle .arrow {
+    font-size: 13px;
+    color: var(--muted);
+    transition: transform 0.3s;
+}
+
+.season-toggle.open .arrow {
+    transform: rotate(180deg);
+}
+
+.season-toggle .season-meta {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--muted);
+    margin-left: 12px;
+}
+
+.season-content {
+    border: 1px solid transparent;
+    border-top: none;
+    border-radius: 0 0 12px 12px;
+    background: var(--card);
+    padding: 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease, border-color 0.3s ease;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.season-content.open {
+    max-height: 2000px;
+    padding: 20px;
+    border-color: var(--amber);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+.gallery-item {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 16/10;
+    position: relative;
+    cursor: pointer;
+    transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.gallery-item:hover {
+    border-color: var(--amber);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px var(--shadow);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.04);
+}
+
+.gallery-item-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 14px 12px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.gallery-item:hover .gallery-item-label {
+    opacity: 1;
+}
+
+/* Placeholder tiles for images not yet uploaded */
+.gallery-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.gallery-placeholder .icon {
+    font-size: 30px;
+}
+
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.88);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.lightbox.open {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90vw;
+    max-height: 85vh;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+.lightbox-close {
+    position: fixed;
+    top: 20px;
+    right: 24px;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+    background: none;
+    border: none;
+    line-height: 1;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.lightbox-close:hover {
+    opacity: 1;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--muted);
+}
+
+.empty-state .icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.empty-state p {
+    font-size: 15px;
+}
